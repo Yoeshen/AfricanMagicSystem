@@ -26,5 +26,42 @@ namespace AfricanMagic.Controllers
 
             return View();
         }
+
+
+        public ActionResult Cart()
+        {
+            ViewBag.Message = "Your Cart page.";
+
+            return View();
+        }
+
+        public ActionResult ProductInfo()
+        {
+            ViewBag.Message = "Your Product Info page.";
+
+            return View();
+        }
+
+        public ActionResult MensSection()
+        {
+            ViewBag.Message = "Your Mens page.";
+
+            return View();
+        }
+
+        public ActionResult WomensSection()
+        {
+            ViewBag.Message = "Your Womens page.";
+
+            return View();
+        }
+
+        public ActionResult KidsSection()
+        {
+            ViewBag.Message = "Your Kids page.";
+
+            return View();
+        }
+
     }
 }

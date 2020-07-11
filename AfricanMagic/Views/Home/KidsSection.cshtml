@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Kids";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<header class="header">
+    <div class="header__title-box">
+        <h1 class="heading--primary">
+            <span class="heading--primary heading-primary--main">Kids</span>
+        </h1>
+    </div>
+</header>
+
+@for (int x = 0; x < 3; x++)
+{
+    <!-- product grid of three 4x5 images + heading and price -->
+    <div class="product-grid">
+        <div class="card">
+            <img src="~/Content/img/4-by-5.png" alt="card image" class="card__image">
+            <div class="card__info">
+                <h3 class="card__info--primary">Name</h3>
+                <h3 class="card__info--secondary">Price</h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/Content/img/4-by-5.png" alt="card image" class="card__image">
+            <div class="card__info">
+                <h3 class="card__info--primary">Name</h3>
+                <h3 class="card__info--secondary">Price</h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/Content/img/4-by-5.png" alt="card image" class="card__image">
+            <div class="card__info">
+                <h3 class="card__info--primary">Name</h3>
+                <h3 class="card__info--secondary">Price</h3>
+            </div>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "ProductInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="two-column-grid">
+    <div class="column--1"></div>
+    <div class="column--2">
+        <img src="~/Content/img/4-by-5.png" alt="product image" class="productimage">
+    </div>
+    <div class="column--3">
+        <div class="h2 product-title">Title</div>
+        <h5 class="product-price">Price</h5>
+        <!-- Drop down options -->
+        <div class="List_options">
+            <form>
+                <label for="quantity">Quantity:</label>
+                <select name="quantity" id="quantityProd">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+
+                <br><br>
+
+                <label for="size">Size:</label>
+                <select name="size" id="size">
+                    <option value="xtrasmall">Extra Small</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="xlarge">Extra Large</option>
+                    <option value="xxlarge">Double Extra Large</option>
+                </select>
+
+                <br><br>
+
+                <label for="colour">Colour:</label>
+                <select name="colour" id="colour">
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                    <option value="grey">Grey</option>
+                </select>
+                <br><br>
+            </form>
+        </div>
+
+        <!-- Submit Panel -->
+        <div class="pannel2" style="text-align:left">
+            <p style="font-size: 1.5rem;">Sub Total: R150-00</p>
+            <p style="font-size: 2rem;">Total: R150-00</p>
+        </div>
+
+        <a href="#" class="btn btn--white" width="50px">Add to Cart</a>
+    </div>
+    <div class="column--4"></div>
+</div>
+
