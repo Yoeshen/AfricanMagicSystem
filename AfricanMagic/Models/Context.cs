@@ -9,7 +9,7 @@ namespace AfricanMagic.Models
 {
     public class Context : DbContext
     {
-        // public Context() : base("name = ContextDB") { }
+        public Context() : base() { }
         public virtual DbSet<Customer> Customers { get; set; }
 
         public virtual DbSet<Inventory> Inventories { get; set; }

@@ -40,6 +40,6 @@ namespace AfricanMagic.Models
         [Display(Name = "Price(Rands)")]
         public double ItemPrice { get; set; }
 
-        public virtual ICollection<Sales> Sale { get; set; };
+        public virtual ICollection<Sales> Sale { get; set; }
     }
 }

@@ -140,6 +140,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -155,6 +156,18 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\icons\cart.svg" />
+    <Content Include="Content\icons\dot-menu.svg" />
+    <Content Include="Content\icons\logo.svg" />
+    <Content Include="Content\icons\menu.svg" />
+    <Content Include="Content\icons\open-menu.svg" />
+    <Content Include="Content\icons\search.svg" />
+    <Content Include="Content\icons\supermarket.svg" />
+    <Content Include="Content\icons\user.svg" />
+    <Content Include="Content\icons\user2.svg" />
+    <Content Include="Content\img\4-by-5.png" />
+    <Content Include="Content\img\headerImage3.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -186,6 +199,18 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Home\KidsSection.cshtml" />
+    <Content Include="Views\Home\MensSection.cshtml" />
+    <Content Include="Views\Home\ProductInfo.cshtml" />
+    <Content Include="Views\Home\WomensSection.cshtml" />
+    <Content Include="Views\Home\Cart.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
