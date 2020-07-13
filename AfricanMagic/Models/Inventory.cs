@@ -13,6 +13,7 @@ namespace AfricanMagic.Models
     {
         [Key]
         [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ItemID { get; set; }
 
         [Required(ErrorMessage = "Required field.")]

@@ -11,100 +11,100 @@ using AfricanMagic.Models;
 
 namespace AfricanMagic.Controllers
 {
-    public class CustomersController : Controller
+    public class InventoryController : Controller
     {
         private Context db = new Context();
 
-       
         public async Task<ActionResult> Index()
         {
-            return View(await db.Customers.ToListAsync());
+            return View(await db.Inventories.ToListAsync());
         }
 
-        
-        public async Task<ActionResult> Details(string id)
+
+        public async Task<ActionResult> Details(int id)
         {
-            if (id == null)
+            if (id == 0)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = await db.Customers.FindAsync(id);
-            if (customer == null)
+            Inventory inventory = await db.Inventories.FindAsync(id);
+            if (inventory == null)
             {
                 return HttpNotFound();
             }
-            return View(customer);
+            return View(inventory);
         }
 
-       
+
+        // GET: Inventory/Create
         public ActionResult Create()
         {
             return View();
         }
 
-      
+        // POST: Inventory/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Email,CustomerFName,CustomerLName,ShippingAddress,PhoneNumber")] Customer customer)
+        public async Task<ActionResult> Create([Bind(Include = "ItemID,ItemName,ItemDescription,Category,Colour,Size,ItemPrice,ItemImage")] Inventory inventory)
         {
             if (ModelState.IsValid)
             {
-                db.Customers.Add(customer);
+                db.Inventories.Add(inventory);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            return View(customer);
+            return View(inventory);
         }
 
-        public async Task<ActionResult> Edit(string id)
+        public async Task<ActionResult> Edit(int id)
         {
-            if (id == null)
+            if (id == 0)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = await db.Customers.FindAsync(id);
-            if (customer == null)
+            Inventory inventory = await db.Inventories.FindAsync(id);
+            if (inventory == null)
             {
                 return HttpNotFound();
             }
-            return View(customer);
+            return View(inventory);
         }
 
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "CustomerID,CustomerFName,CustomerLName,Email,ShippingAddress,PhoneNumber")] Customer customer)
+        public async Task<ActionResult> Edit([Bind(Include = "ItemID,ItemName,ItemDescription,Category,Colour,Size,ItemPrice,ItemImage")] Inventory inventory)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(customer).State = EntityState.Modified;
+                db.Entry(inventory).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View(customer);
+            return View(inventory);
         }
 
-        public async Task<ActionResult> Delete(string id)
+        public async Task<ActionResult> Delete(int id)
         {
-            if (id == null)
+            if (id == 0)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = await db.Customers.FindAsync(id);
-            if (customer == null)
+            Inventory inventory = await db.Inventories.FindAsync(id);
+            if (inventory == null)
             {
                 return HttpNotFound();
             }
-            return View(customer);
+            return View(inventory);
         }
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(string id)
+        public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Customer customer = await db.Customers.FindAsync(id);
-            db.Customers.Remove(customer);
+            Inventory inventory = await db.Inventories.FindAsync(id);
+            db.Inventories.Remove(inventory);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }

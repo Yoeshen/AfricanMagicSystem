@@ -13,6 +13,7 @@ namespace AfricanMagic.Models
     {
         [Key]
         [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int SalesID { get; set; }
 
         [Display(Name = "Customers")]
