@@ -31,7 +31,7 @@ namespace AfricanMagic.Models
 
         
         [ForeignKey("CustomerID")]
-        public virtual Customer Customer { get; set; }
+        public virtual Customer Customers { get; set; }
         [ForeignKey("ItemID")]
         public virtual Inventory Inventory { get; set; }
     }
