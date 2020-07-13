@@ -45,14 +45,5 @@ namespace AfricanMagic.Models
         [DataType(DataType.Text)]
         public string PhoneNumber { get; set; }
 
-        public virtual ICollection<Sales> Sale { get; set; }
-
-        public string GenerateID()
-        {
-            string x = CustomerFName.Substring(0, 2) + CustomerLName.Substring(0, 2) + CustomerID;
-
-            return x;
-
         }
-    }
 }

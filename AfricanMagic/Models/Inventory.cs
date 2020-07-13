@@ -12,6 +12,7 @@ namespace AfricanMagic.Models
     public class Inventory
     {
         [Key]
+        [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string ItemID { get; set; }
 
@@ -36,10 +37,7 @@ namespace AfricanMagic.Models
         public string Size { get; set; }
 
         [Required(ErrorMessage = "Required field.")]
-        [DataType(DataType.Currency)]
         [Display(Name = "Price(Rands)")]
         public double ItemPrice { get; set; }
-
-        public virtual ICollection<Sales> Sale { get; set; }
     }
 }
