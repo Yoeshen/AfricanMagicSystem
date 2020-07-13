@@ -23,12 +23,7 @@ namespace AfricanMagic.Models
         [Display(Name = "Customer Last Name")]
         public string CustomerLName { get; set; }
 
-        //ID will be automatically generated.(Not customer's Actual ID number)
         [Key]
-        [Required]
-        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-        public string CustomerID { get; set; }
-
         [Required(ErrorMessage = "Cannot be blank.")]
         [Display(Name = "Customer Email")]
         [DataType(DataType.Text)]
@@ -44,6 +39,8 @@ namespace AfricanMagic.Models
         [StringLength(10, ErrorMessage = "Invalid Number. Start with '0'. ")]
         [DataType(DataType.Text)]
         public string PhoneNumber { get; set; }
+
+        public virtual ICollection<Sales> sale { get; set; }
 
         }
 }

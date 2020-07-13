@@ -13,13 +13,17 @@ namespace AfricanMagic.Models
     {
         [Key]
         [Required]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string ItemID { get; set; }
+        public int ItemID { get; set; }
 
         [Required(ErrorMessage = "Required field.")]
         [DataType(DataType.Text)]
         [Display(Name = "Item Name")]
         public string ItemName { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]
+        [Display(Name = "Item Description")]
+        public string ItemDescription { get; set; }
 
         [Required(ErrorMessage = "Required field.")]
         [DataType(DataType.Text)]
@@ -39,5 +43,10 @@ namespace AfricanMagic.Models
         [Required(ErrorMessage = "Required field.")]
         [Display(Name = "Price(Rands)")]
         public double ItemPrice { get; set; }
+
+        [Required]
+        public byte ItemImage { get; set; }
+
+        public virtual ICollection<Sales> sale { get; set; }
     }
 }

@@ -13,13 +13,13 @@ namespace AfricanMagic.Models
     {
         [Key]
         [Required]
-        public string SalesID { get; set; }
+        public int SalesID { get; set; }
 
-        /*[Display(Name = "Customers")]
+        [Display(Name = "Customers")]
         public string CustomerID { get; set; }
 
         [Display(Name = "Items Sold")]
-        public string ItemID { get; set; }*/
+        public int ItemID { get; set; }
 
         [Display(Name = "Total amount paid")]
         [DataType(DataType.Currency)]
@@ -29,10 +29,10 @@ namespace AfricanMagic.Models
         [DataType(DataType.DateTime)]
         public DateTime DateOfPurchase { get; set; }
 
-        /*
+        
         [ForeignKey("CustomerID")]
         public virtual Customer Customer { get; set; }
         [ForeignKey("ItemID")]
-        public virtual Inventory Inventory { get; set; }*/
+        public virtual Inventory Inventory { get; set; }
     }
 }
