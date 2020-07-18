@@ -13,16 +13,16 @@ namespace AfricanMagic.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Contact()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Your application contact page.";
 
             return View();
         }
 
         public ActionResult CheckOut()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your checkout page.";
 
             return View();
         }
