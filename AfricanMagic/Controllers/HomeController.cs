@@ -20,7 +20,7 @@ namespace AfricanMagic.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult CheckOut()
         {
             ViewBag.Message = "Your contact page.";
 
