@@ -24,7 +24,8 @@ namespace AfricanMagic
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/css/style.css"));
+                      "~/Content/css/style.css",
+                      "~/Content/css/Site.css"));
         }
     }
 }

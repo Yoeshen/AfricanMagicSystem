@@ -36,7 +36,11 @@ namespace AfricanMagic.Controllers
             return View(customer);
         }
 
-       
+        public ActionResult LogIn()
+        {
+            return View();
+        }
+
         public ActionResult Create()
         {
             return View();
